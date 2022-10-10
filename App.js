@@ -7,7 +7,6 @@ export default function App() {
 
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
-  // const apiUrl = process.env.REACT_APP_GIPHY_URL
 
   useEffect(() => {
     getGif();
@@ -26,34 +25,15 @@ export default function App() {
       Alert.alert('Error making API request.');
     }
   }
-  //   setLoading(true);
-  //   fetch(`${REACT_APP_GIPHY_URL}`,
-  //   {
-  //     method: 'GET',
-  //     headers: {
-  //       Accept: 'application/json',
-  //       'Content-Type': 'application/json'
-  //     }
-  //   }
-  //  )
-  //  .then((response) => response.json())
-  //  .then((json) => {
-  //     setData(json.data);
-  //     console.log(json.data);
-  //     setLoading(false);
-  //  }).catch(error => {
-  //   Alert.alert('Error making API request.');
-  //   console.log(error);
-  //  });
-   // end getGif
 
   return (
     <View style={{ flex: 1, padding: 24, margin: 50, alignItems: 'center' }}>
+      <Text style={styles.titleText}>GIPHY Project</Text>
       <Text>Click to get a random cat gif!</Text>
       <StatusBar style="auto" />
       <Button
         onPress={getGif}
-        title="Get a gif!"
+        title="Click Here!"
         color="#841584"
         accessibilityLabel="Learn more about this purple button"
       />
@@ -77,5 +57,12 @@ const styles = StyleSheet.create({
   gif: {
     width: 200,
     height: 200,
+    margin: 20
+  },
+  titleText: {
+    color: 'teal',
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginBottom: 20
   }
 });
