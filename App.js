@@ -5,37 +5,47 @@ import { ActivityIndicator, StyleSheet, Text, View, Button, Alert, Image } from 
 
 export default function App() {
 
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   // const apiUrl = process.env.REACT_APP_GIPHY_URL
 
   useEffect(() => {
-    console.log('page load');
     getGif();
   }, []);
 
-  const getGif = () => {
+  const getGif = async () => {
     console.log('in getGif');
-    setLoading(true);
-    fetch(`${REACT_APP_GIPHY_URL}`,
-    {
-      method: 'GET',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      }
-    }
-   )
-   .then((response) => response.json())
-   .then((json) => {
+    try {
+      const response = await fetch(`${REACT_APP_GIPHY_URL}`);
+      const json = await response.json();
       setData(json.data);
       console.log(json.data);
       setLoading(false);
-   }).catch(error => {
-    Alert.alert('Error making API request.');
-    console.log(error);
-   });
-  } // end getGif
+    } catch (error) {
+      console.log(error);
+      Alert.alert('Error making API request.');
+    }
+  }
+  //   setLoading(true);
+  //   fetch(`${REACT_APP_GIPHY_URL}`,
+  //   {
+  //     method: 'GET',
+  //     headers: {
+  //       Accept: 'application/json',
+  //       'Content-Type': 'application/json'
+  //     }
+  //   }
+  //  )
+  //  .then((response) => response.json())
+  //  .then((json) => {
+  //     setData(json.data);
+  //     console.log(json.data);
+  //     setLoading(false);
+  //  }).catch(error => {
+  //   Alert.alert('Error making API request.');
+  //   console.log(error);
+  //  });
+   // end getGif
 
   return (
     <View style={{ flex: 1, padding: 24, margin: 50, alignItems: 'center' }}>
