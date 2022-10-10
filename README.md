@@ -5,6 +5,10 @@ _Duration: 4.5 hours_
 
 See a random cat gif whenever you like when you click the 'Click Here!' button.
 
+## Screen Shots
+
+<img src="images/giphy-project.jpg" style="width: 200px;"/>
+
 ### Prerequisites
 
 - [Expo Go](https://expo.dev/) account with Expo Go app downloaded on your mobile device.
