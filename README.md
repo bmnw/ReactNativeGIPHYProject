@@ -5,6 +5,8 @@ _Duration: 4.5 hours_
 
 See a random cat gif whenever you like when you click the 'Click Here!' button.
 
+Built with an iOS device.
+
 ## Screen Shots
 
 <img src="images/giphy-project.jpg" style="width: 200px;"/>
