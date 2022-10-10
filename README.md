@@ -2,4 +2,4 @@
 
 ## Description
 
-Using React Native Expo Go to return a random gif using GIPHY API!
+Using React Native Expo Go to return a random gif using the GIPHY API!
