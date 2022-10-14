@@ -1,7 +1,7 @@
 # Cat GIFs Galore
 
 ## Description
-_Duration: 4.5 hours_
+_Duration: 5.5 hours_
 
 See a random cat GIF whenever you like when you click the 'Click Here!' button.
 
@@ -9,7 +9,7 @@ Built using Expo Go on an iOS device.
 
 ## Screen Shots
 
-<img src="images/giphy-project.jpg" style="width: 200px;"/>
+<img src="images/cat-gifs-galore.jpg" style="width: 200px;"/>
 
 ### Prerequisites
 
