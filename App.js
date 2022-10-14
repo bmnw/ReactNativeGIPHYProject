@@ -27,9 +27,9 @@ export default function App() {
   }
 
   return (
-    <View style={{ flex: 1, padding: 24, margin: 50, alignItems: 'center' }}>
-      <Text style={styles.titleText}>GIPHY Project</Text>
-      <Text>Click to get a random cat gif!</Text>
+    <View style={styles.view}>
+      <Text style={styles.titleText}>Cats GIFs Galore</Text>
+      <Text style={styles.subtitleText}>Click to get a random cat gif!</Text>
       <StatusBar style="auto" />
       <Button
         onPress={getGif}
@@ -48,21 +48,30 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   gif: {
-    width: 200,
-    height: 200,
+    width: 250,
+    height: 250,
     margin: 20
   },
   titleText: {
-    color: 'teal',
+    color: '#2f4f4f',
     fontWeight: 'bold',
     fontSize: 20,
     marginBottom: 20
+  },
+  subtitleText: {
+    color: '#2f4f4f',
+    fontSize: 15,
+    marginBottom: 10
+  },
+  view: {
+    backgroundColor: '#f0ffff',
+    flex: 1, 
+    padding: 25, 
+    marginTop: 50, 
+    alignItems: 'center'
+    // borderWidth: 1,
+    // borderRadius: 10,
+    // borderColor: '#a9a9a9'
   }
 });
